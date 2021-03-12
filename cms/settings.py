@@ -31,6 +31,8 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+    'pplsite',
+    'crispy_forms',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -83,7 +85,7 @@ WSGI_APPLICATION = 'cms.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'ppl',
+        'NAME': 'pplsite',
         'USER': 'pksingh',
         'PASSWORD': 'Golu@123',
         'HOST': '3.140.251.195',
@@ -133,3 +135,7 @@ STATIC_ROOT = 'staticfiles'
 STATICFILES_DIRS = (
 os.path.join(BASE_DIR, 'static',),)
 STATIC_URL = '/static/'
+
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
