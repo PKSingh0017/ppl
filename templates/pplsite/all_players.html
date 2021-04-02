@@ -190,18 +190,17 @@
               <div class="card-body text-center">
                 <!--Category & Title-->
                 <a href="" class="grey-text">
-                  <h5>Shirt</h5>
+                  <h5>{{ item.branch }}</h5>
                 </a>
                 <h5>
                   <strong>
-                    <a href="" class="dark-grey-text">{{ item.firstname }}
-                      <span class="badge badge-pill danger-color">NEW</span>
+                    <a href="" class="dark-grey-text">{{ item.firstname }} {{ item.lastname }}
                     </a>
                   </strong>
                 </h5>
 
                 <h4 class="font-weight-bold blue-text">
-                  <strong>120$</strong>
+                  <strong>{{ item.get_year_display }}</strong>
                 </h4>
 
               </div>
