@@ -28,3 +28,9 @@ def player_registration(request):
         form = PlayerRegisterationForm()
         return render(request, 'pplsite/player_registration.html', {'form': form})
 
+def all_players(request):
+    all_players = Player.objects.all()
+    context = {
+        'all_players': all_players
+    }
+    return render(request, 'pplsite/all_players.html', context)
